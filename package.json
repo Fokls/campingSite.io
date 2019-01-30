@@ -1,0 +1,12 @@
+{
+  "name": "naturousProj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Fokls/campingSite.io.git",
+  "author": "Daria <foklacu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
