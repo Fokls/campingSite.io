@@ -3,143 +3,21 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-@import "base/animation";
+//@import "base/animation";
 @import "base/typography";
 @import "base/utilities";
 @import "base/base";
 
-@import "pages/home.scss";
+@import "pages/home";
 
-@import"components/buttons";
+//@import"components/buttons";
 
-@import"layout/header.scss";
+//@import"layout/header";
+@import"layout/grid";
 
-.header {
-    height: 95vh;
-    background-image:  linear-gradient(
-        to right bottom,
-        rgba($primary-color-light, 0.8), 
-        rgba($primary-color-dark, 0.705)),
-        url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top;
 
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-
-    position: relative;
-
-    &__logo-box{
-        position: absolute;
-        top: 4.5rem;
-        left: 4.5rem;
-    }
-
-    &__logo {
-        height: 3rem;
-    }
-    
-    &__text-box{
-        position: absolute;
-        top:40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    
-}
 
  
 
 
-.heading-primary {
-color: $color-white;
-text-transform: uppercase;
-backface-visibility: hidden;
-margin-bottom: 6rem;
 
-&--main{
-    display: block;
-    font-size: 6rem;;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-
-    animation-name: moveLeft;
-    animation-duration: 2s;
-}
-
-&--sub{
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 17.4px;
-    animation-name: moveRight;
-    animation-duration: 2s;
-}
-}
-
-
-.btn{
-
-    &:link,
-    &:visited{
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1.5rem 4rem;
-        display: inline-block;
-        border-radius: 10rem;
-        transition: all .2s ;
-        position: relative;
-        }
-    
-        &:hover{
-            transform: translateY(-0.3rem);
-            box-shadow: 0 1rem 2rem rgba($color-black, .2);
-
-            &:after{
-                transform: scaleX(1.4) scaleY(1.6);
-        
-                opacity: 0;
-            }
-        }
-    
-        &--white{
-            background-color: $color-white;
-            color: $color-grey;
-            box-shadow: 0 .5rem 1rem rgba($color-black,.2);
-
-            &:after{
-                background-color:$color-white;
-            }
-        }
-    
-        &:active{
-            transform: translateY(-.1rem)
-        }
-    
-        &:after{
-            content:'';
-            display: inline-block;
-            height: 100%;
-            width: 100%;
-            border-radius: 10rem;
-            position: absolute;
-            top:0;
-            left:0;
-            z-index: -1;
-            transition: all .4s;
-        }
-    
-       
-    
-        
-    }
-
-
-
-
-
-
-.btn--animated{
-    animation: moveBtn 2s ease-in-out .75s;
-    animation-fill-mode: backwards;
-}
