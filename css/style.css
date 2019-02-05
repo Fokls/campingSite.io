@@ -92,6 +92,9 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
+.u-extra-margin-left-small {
+  margin-left: 3rem; }
+
 *,
 *::after,
 *::before {
@@ -109,6 +112,14 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20rem; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-7deg) translateY(-10rem); }
+  .section-features > * {
+    transform: skewY(7deg); }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -180,7 +191,8 @@ body {
     border-radius: 2px;
     position: absolute;
     z-index: 10;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    outline-offset: 2rem; }
     .composition__pic--p1 {
       left: 0;
       top: -2rem; }
@@ -191,9 +203,33 @@ body {
       left: 20%;
       top: 10rem; }
     .composition__pic:hover {
+      outline: 1.5rem solid #55c57a;
       z-index: 20;
-      transform: scale(1.05);
+      transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
+  .composition:hover .composition__pic:not(:hover) {
+    transform: scale(0.95); }
+
+.features-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s; }
+  .features-box__icon {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent; }
+  .features-box:hover {
+    transform: translateY(-2rem) scale(1.05); }
+  .features-box__text {
+    padding-bottom: 2rem; }
 
 .header {
   height: 95vh;
@@ -217,26 +253,8 @@ body {
 
 .row {
   max-width: 120rem;
+  display: flex;
   margin: 0 auto; }
-  .row::after {
-    content: '';
-    display: table;
-    clear: both; }
-  .row [class^="col-"] {
-    float: left; }
-    .row [class^="col-"]:not(:last-child) {
-      margin-right: 5rem; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-  .row .col-1-of-2 {
-    width:  calc((100% - 5rem )/2); }
-  .row .col-1-of-3 {
-    width:  calc((100% - 5rem ) /3); }
-  .row .col-2-of-3 {
-    width:  calc(2*((100% - 5rem )/3)); }
-  .row .col-1-of-4 {
-    width:  calc((100% - 5rem )/4); }
-  .row .col-2-of-4 {
-    width:  calc(  2*((100% - 5rem )/4)); }
-  .row .col-3-of-4 {
-    width:  calc(  3*((100% - 5rem )/4)); }
+  .row .col {
+    flex: 1;
+    padding: 0 3rem; }
