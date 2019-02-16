@@ -1,12 +1,26 @@
 
 // Colors
-$color-grey-light:#f7f7f7;
+
+
 $primary-color:#55c57a;
 $primary-color-light:#7ed56f;
 $primary-color-dark:#28b485;
+
+$color-secondary-light:#ffb900;
+$color-secondary-normal:#ff7730;
+
+$color-tertiary-light:#2998ff;
+$color-tertiary-normal:#5643fa;
+
 $color-white:#fff ;
-$color-grey:#777;
 $color-black:#000;
+$color-grey:#777;
+$color-grey-light:#f7f7f7;
+$color-grey-dark:#999;
+
+//Sadow
+
+$standard-shadow: 0 2rem 4rem rgba($color-black, .15);
 
 
 //GRID

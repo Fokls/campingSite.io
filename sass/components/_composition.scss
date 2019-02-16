@@ -2,7 +2,7 @@
     position: relative;
     &__pic{
         width: 55%; 
-        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+        box-shadow: $standard-shadow;
         border-radius:2px; 
         position: absolute;
         z-index: 10;
